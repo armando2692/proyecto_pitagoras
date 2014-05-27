@@ -1,0 +1,32 @@
+<body>
+<h1>  Notas Estudiantes</h1>
+<table>
+  <thead>
+    <tr>
+      <th width="200">Materia</th>
+      <th width="150">Nombre</th>
+      <th width="150">Apellido</th>
+      <th width="150">Cedula</th>
+      <th width="150">Nota Examen 1</th>
+      <th width="150">Nota Examen 2</th>
+      <th width="150">Nota Examen 3</th>
+      <th width="150">Nota Final</th>
+    </tr>
+  </thead>
+  <tbody>
+   <%@archivo.leerGoogleDriveCedula(session['cedula'])%>
+    
+    <%for persona in $listaMaterias %>
+    <tr>   
+     <%for valor in persona%>
+      <td><%=valor%></td>
+        <%end%> 
+    </tr>
+<%end%>
+  </tbody>
+</table>
+
+  <%= form_tag('/estudiantelogueado/index',method:"get") do %>
+            <%=submit_tag("Salir")%>
+         <%end%>
+</body>

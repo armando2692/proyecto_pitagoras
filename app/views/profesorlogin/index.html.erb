@@ -1,0 +1,23 @@
+ <body>
+ <div class="row">
+    <div class="large-6 columns">
+      <div class="signup-panel">
+        <p class="welcome">   PROFESOR </p>
+        <%= image_tag 'profesor.jpg' %>
+         <hr/>
+        <form>
+          <div class="row collapse">
+            <div class="small-2  columns">
+             <!-- <span class="prefix"><i class="fi-torso-female"></i></span>-->
+            </div>
+          </div>
+        </form>
+       <p>   Ingrese su clave: </p>
+           <%= form_tag('../profesorlogueado/index',method:"get") do %>
+              <%=password_field_tag(:clave)%>
+              <%=submit_tag("ingresar")%>
+           <%end%>
+      </div>
+    </div>
+   </div>              
+  </body>     

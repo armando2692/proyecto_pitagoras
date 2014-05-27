@@ -1,0 +1,45 @@
+  
+  <body>
+  <div class="row">
+    <div class="large-12 columns">
+      <ul class="button-group">
+           <%= form_tag('../minotaestudiante/index',method:"get") do %>
+            <%=submit_tag("Notas")%>
+         <%end%>
+         <%= form_tag('/subscripcion/index',method:"get") do %>
+            <%=submit_tag("Subscribir materia")%>
+         <%end%>
+            <%= form_tag('/estudiantelogout/index',method:"get") do %>
+            <%=submit_tag("Logout")%>
+         <%end%>
+      </ul>
+      
+       
+      <%= image_tag 'fondoEstudiante.jpg' %>
+          </div>
+  </div>
+  
+   
+  
+  
+   
+  
+  <div class="row">
+  
+    <div class="large-8 columns">
+    </div>
+      
+  </div>
+
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© Pitagoras </p>
+        </div>
+      </div>
+    </div> 
+  </footer>
+</body>

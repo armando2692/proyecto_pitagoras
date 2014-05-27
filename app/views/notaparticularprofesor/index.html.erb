@@ -1,0 +1,28 @@
+<body>
+<h1> Estudiante</h1>
+<table>
+  <thead>
+    <tr>
+      <th width="200">Materia</th>
+      <th width="150">Nombre</th>
+      <th width="150">Apellido</th>
+      <th width="150">Cedula</th>
+      <th width="150">Nota Examen 1</th>
+      <th width="150">Nota Examen 2</th>
+      <th width="150">Nota Examen 3</th>
+      <th width="150">Nota Final</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>   
+     <%for valor in $alumno%>
+      <td><%=valor%></td>
+        <%end%> 
+    </tr>
+  </tbody>
+</table>
+   <%= form_tag('/profesorlogueado/index',method:"get") do %>
+            <%=submit_tag("Salir")%>
+         <%end%>
+
+</body>

@@ -1,0 +1,14 @@
+  <!-- = form_tag({:controller => "cargararchivo", :action => "subir_archivo"}, :method =>"post", :multipart => "true") do %> -->
+   <body>
+   <h1> Archivo  <h2>
+
+      <%= form_tag('../listosubirarchivoprofesor/index',method:"get") do %>
+         <input type="file" id="<%= :ruta%>" name="<%= :ruta %>" style="width:250px;" value="<%= :ruta %>" />
+      <%= submit_tag("Cargar")%>
+<%end%>
+<hr/>
+      <%= form_tag('../profesorlogueado/index',method:"get") do %>
+              <%=submit_tag("Atras")%> 
+              <%end%>
+
+</body>

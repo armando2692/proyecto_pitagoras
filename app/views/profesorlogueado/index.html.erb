@@ -1,0 +1,60 @@
+
+  <body>
+  <div class="row">
+    <div class="large-12 columns">
+      <ul class="button-group">
+         <%= form_tag('/cargararchivo/index',method:"get") do %>
+            <%=submit_tag("Cargar Notas")%>
+         <%end%>
+         <%= form_tag('/estudiantenotas/index',method:"get") do %>
+            <%=submit_tag("imprimir alumnos")%>
+         <%end%> 
+            <%= form_tag('/recibir_mensaje/index',method:"get") do %>
+            <%=submit_tag("buscar alumno")%>
+         <%end%> 
+         <%= form_tag('/profesorlogout/index',method:"get") do %>
+            <%=submit_tag("logout")%>
+         <%end%> 
+      
+      </ul>
+      
+       
+      <%= image_tag 'fondoEstudiante.jpg' %>
+          </div>
+  </div>
+   <hr/>
+   
+  
+  <div class="row">
+  
+    <div class="large-8 columns">
+      <h4>Profesor</h4>
+      <p> Pitagoras  es una academia dedicada a la exelencia y al desempeño academico de los alumnos y profesores para un futuro mejor.</p>
+           
+    </div>
+    
+    <div class="large-4 columns">
+    
+       
+      
+     
+    </div>
+        
+  </div>
+  
+  
+
+  
+   
+  
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© Pitagoras  RJ:13567</p>
+        </div>
+      </div>
+    </div> 
+  </footer>
+</body>

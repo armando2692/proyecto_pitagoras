@@ -1,0 +1,25 @@
+ <body>
+ <div class="row">
+    <div class="large-6 columns">
+      <div class="signup-panel">
+        <p class="welcome"> ESTUDIANTE </p> <%= image_tag 'estudiante.jpg' %>
+         <hr/>
+        <form>
+          <div class="row collapse">
+            <div class="small-2  columns">
+              
+            </div>
+          </div>
+        </form>
+<p> Ingrese su cedula: </p>
+              <%= form_tag('../estudiantelogueado/index',method:"get") do %>
+              <%=password_field_tag(:cedula)%>
+              <%=submit_tag("ingresar")%> 
+              <%end%>
+
+
+
+      </div>
+    </div>
+   </div>              
+  </body>     
