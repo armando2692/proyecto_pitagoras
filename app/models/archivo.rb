@@ -19,8 +19,8 @@
        while(!(hojaTrabajo.nil?))do
           if (archivo.worksheets[numeroHojaTrabajo].title == materia)
             cantidadAlumno=0
-            for i in (1 .. hojaTrabajo.num_rows)
-               if(cedula==hojaTrabajo[i,3])
+            for i in (2 .. hojaTrabajo.num_rows)
+               if(cedula==hojaTrabajo[i,3].split(".").first)
                  $alumno=[archivo.worksheets[numeroHojaTrabajo].title,hojaTrabajo[i, 1],hojaTrabajo[i, 2],hojaTrabajo[i, 3],hojaTrabajo[i, 4],hojaTrabajo[i, 5],hojaTrabajo[i, 6],hojaTrabajo[i, 7]]
                end
             end 
@@ -51,7 +51,7 @@
        while(!(hojaTrabajo.nil?))do
           if (archivo.worksheets[numeroHojaTrabajo].title == materia)
             cantidadAlumno=0
-            for i in (1 .. hojaTrabajo.num_rows)
+            for i in (2 .. hojaTrabajo.num_rows)
                 $listaAlumnos[cantidadAlumno]=[archivo.worksheets[numeroHojaTrabajo].title,hojaTrabajo[i, 1],hojaTrabajo[i, 2],hojaTrabajo[i, 3],hojaTrabajo[i, 4],hojaTrabajo[i, 5],hojaTrabajo[i, 6],hojaTrabajo[i, 7]]
                 cantidadAlumno=cantidadAlumno+1
             end 
@@ -115,7 +115,7 @@
        tituloHojaTrabajo=archivo.worksheets[numeroHojaTrabajo].title
        while(!(hojaTrabajo.nil?))do
            for i in (2 .. hojaTrabajo.num_rows)
-              if(hojaTrabajo[i, 3]==cedula)
+              if(hojaTrabajo[i, 3].split(".").first==cedula)
                 return true
               end
             end 
@@ -140,7 +140,7 @@
        
        while(!(hojaTrabajo.nil?))do
            for i in (2 .. hojaTrabajo.num_rows)
-              if(hojaTrabajo[i, 3]==cedula)
+              if(hojaTrabajo[i, 3].split(".").first==cedula)
                 puts 'entro' 
                 $listaMaterias[cantidadMateria]=[archivo.worksheets[numeroHojaTrabajo].title,hojaTrabajo[i, 1],hojaTrabajo[i, 2],hojaTrabajo[i, 3],hojaTrabajo[i, 4],hojaTrabajo[i, 5],hojaTrabajo[i, 6],hojaTrabajo[i, 7]]
                 cantidadMateria=cantidadMateria+1
